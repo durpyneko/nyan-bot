@@ -1,0 +1,24 @@
+{
+  "name": "nyan-bot-reworked",
+  "version": "1.0.0",
+  "description": "discord bot",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "durpyneko",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "chalk": "^4.1.2",
+    "colors": "^1.4.0",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "nekologger": "^1.0.3",
+    "nodemon": "^3.0.1"
+  }
+}

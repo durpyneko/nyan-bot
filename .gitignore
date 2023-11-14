@@ -1,0 +1,11 @@
+# unecessary
+/old
+
+# dependencies
+/node_modules
+
+# env's
+.env
+
+# configs
+config.json
