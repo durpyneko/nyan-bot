@@ -2,10 +2,10 @@
 const logger = require("../../utils/logger");
 
 // Main
-module.exports = (client, message) => {
+module.exports = (client) => {
   // Logging
   logger({
-    name: "LOGIN",
+    name: "ready",
     type: "info",
     content: `${client.user.username} is online!`,
   });
