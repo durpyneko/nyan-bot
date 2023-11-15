@@ -16,7 +16,7 @@ const HelpEmbed = {
       fields: [
         {
           name: `Commands:`,
-          value: `• none (for now)`,
+          value: `• ping\n• del [amount] (user needs manage messages permission)`,
         },
         {
           name: `Other:`,
