@@ -19,14 +19,18 @@ module.exports = (client) => {
   for (const file of eventFiles) {
     const event = require(file);
     const eventName = path.basename(file, ".js");
+    const eventSource = path.relative(__dirname, file).replace(/\\/g, "/");
+    const eventFolderName = eventSource.split("/").slice(0, -1).join("/");
 
     // Attach the event to the client
-    client.on(eventName, (...args) => event(client, ...args));
+    client.on(eventName, (...args) =>
+      event(client, ...args, { source: eventSource, client })
+    );
 
     logger({
       name: "eventLoader",
       type: "system",
-      content: `Loaded event: ${eventName}`,
+      content: `Loaded event: ${eventFolderName}/${eventName}`,
     });
   }
 };
